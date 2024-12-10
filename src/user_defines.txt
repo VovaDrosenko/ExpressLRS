@@ -11,20 +11,64 @@
 ### BINDING PHRASE: ###
 # Uncomment the line below to use a hardcoded binding phrase
 # Leave commented to use traditional binding
-#-DMY_BINDING_PHRASE="default ExpressLRS binding phrase"
+-DMY_BINDING_PHRASE="taf_drones_4186"
 
 
 ### REGULATORY DOMAIN: ###
 
 # Domain is used to define correct frequency band for 900MHz hardware.
-#-DRegulatory_Domain_AU_915
-#-DRegulatory_Domain_EU_868
-#-DRegulatory_Domain_IN_866
-#-DRegulatory_Domain_AU_433
-#-DRegulatory_Domain_EU_433
-#-DRegulatory_Domain_US_433
-#-DRegulatory_Domain_US_433_WIDE
-#-DRegulatory_Domain_FCC_915
+-DRegulatory_Domain_FCC_915
+#-DRegulatory_Domain_UA210
+#-DRegulatory_Domain_UA230
+#-DRegulatory_Domain_UA250
+#-DRegulatory_Domain_UA270
+#-DRegulatory_Domain_UA290
+#-DRegulatory_Domain_UA310
+#-DRegulatory_Domain_UA330
+#-DRegulatory_Domain_UA350
+#-DRegulatory_Domain_UA370
+#-DRegulatory_Domain_UA390
+#-DRegulatory_Domain_UA410
+#-DRegulatory_Domain_UA430
+#-DRegulatory_Domain_UA450
+#-DRegulatory_Domain_UA460
+#-DRegulatory_Domain_UA470
+#-DRegulatory_Domain_UA490
+#-DRegulatory_Domain_UA510
+#-DRegulatory_Domain_UA530
+#-DRegulatory_Domain_UA550
+#-DRegulatory_Domain_UA570
+#-DRegulatory_Domain_UA590
+#-DRegulatory_Domain_UA610
+#-DRegulatory_Domain_UA630
+#-DRegulatory_Domain_UA650
+#-DRegulatory_Domain_UA670
+#-DRegulatory_Domain_UA690
+#-DRegulatory_Domain_UA710
+#-DRegulatory_Domain_UA730
+#-DRegulatory_Domain_UA750
+#-DRegulatory_Domain_UA770
+#-DRegulatory_Domain_UA790
+#-DRegulatory_Domain_UA810
+#-DRegulatory_Domain_UA830
+#-DRegulatory_Domain_UA850
+#-DRegulatory_Domain_UA870
+#-DRegulatory_Domain_UA890
+#-DRegulatory_Domain_UA910
+#-DRegulatory_Domain_UA930
+#-DRegulatory_Domain_UA950
+#-DRegulatory_Domain_UA970
+#-DRegulatory_Domain_UA990
+#-DRegulatory_Domain_UA1010
+#-DRegulatory_Domain_UA1030
+#-DRegulatory_Domain_UA1050
+#-DRegulatory_Domain_UA1070
+#-DRegulatory_Domain_UA1090
+#-DRegulatory_Domain_UA1110
+#-DRegulatory_Domain_UA1130
+#-DRegulatory_Domain_UA1150
+#-DRegulatory_Domain_UA1170
+#-DRegulatory_Domain_UA1190
 #-DRegulatory_Domain_ISM_2400
 #-DRegulatory_Domain_EU_CE_2400
 

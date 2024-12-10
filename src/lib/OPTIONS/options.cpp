@@ -40,22 +40,109 @@ __attribute__ ((used)) static firmware_options_t flashedOptions = {
 #if defined(Regulatory_Domain_ISM_2400)
     .domain = 0,
 #else
-    #if defined(Regulatory_Domain_AU_915)
-    .domain = 0,
-    #elif defined(Regulatory_Domain_FCC_915)
-    .domain = 1,
-    #elif defined(Regulatory_Domain_EU_868)
-    .domain = 2,
-    #elif defined(Regulatory_Domain_IN_866)
-    .domain = 3,
-    #elif defined(Regulatory_Domain_AU_433)
-    .domain = 4,
-    #elif defined(Regulatory_Domain_EU_433)
-    .domain = 5,
-    #elif defined(Regulatory_Domain_US_433)
-    .domain = 6,
-    #elif defined(Regulatory_Domain_US_433_WIDE)
-    .domain = 7,
+    #if defined(Regulatory_Domain_FCC_915)
+        .domain = 0,
+    #elif defined(Regulatory_Domain_UA210)
+        .domain = 1
+    #elif defined(Regulatory_Domain_UA230)
+        .domain =  2  
+    #elif defined(Regulatory_Domain_UA250)
+        .domain =  3  
+    #elif defined(Regulatory_Domain_UA270)
+        .domain =  4  
+    #elif defined(Regulatory_Domain_UA290)
+        .domain =  5  
+    #elif defined(Regulatory_Domain_UA310)
+        .domain =  6  
+    #elif defined(Regulatory_Domain_UA330)
+        .domain =  7  
+    #elif defined(Regulatory_Domain_UA350)
+        .domain =  8  
+    #elif defined(Regulatory_Domain_UA370)
+        .domain =  9  
+    #elif defined(Regulatory_Domain_UA390)
+        .domain = 10  
+    #elif defined(Regulatory_Domain_UA410)
+        .domain = 11  
+    #elif defined(Regulatory_Domain_UA430)
+        .domain = 12  
+    #elif defined(Regulatory_Domain_UA450)
+        .domain = 13  
+    #elif defined(Regulatory_Domain_UA470)
+        .domain = 14  
+    #elif defined(Regulatory_Domain_UA490)
+        .domain = 15  
+    #elif defined(Regulatory_Domain_UA510)
+        .domain = 16  
+    #elif defined(Regulatory_Domain_UA530)
+        .domain = 17  
+    #elif defined(Regulatory_Domain_UA550)
+        .domain = 18  
+    #elif defined(Regulatory_Domain_UA570)
+        .domain = 19  
+    #elif defined(Regulatory_Domain_UA590)
+        .domain = 20  
+    #elif defined(Regulatory_Domain_UA610)
+        .domain = 21  
+    #elif defined(Regulatory_Domain_UA630)
+        .domain = 22  
+    #elif defined(Regulatory_Domain_UA650)
+        .domain = 23  
+    #elif defined(Regulatory_Domain_UA670)
+        .domain = 24  
+    #elif defined(Regulatory_Domain_UA690)
+        .domain = 25  
+    #elif defined(Regulatory_Domain_UA710)
+        .domain = 26  
+    #elif defined(Regulatory_Domain_UA730)
+        .domain = 27  
+    #elif defined(Regulatory_Domain_UA750)
+        .domain = 28  
+    #elif defined(Regulatory_Domain_UA770)
+        .domain = 29  
+    #elif defined(Regulatory_Domain_UA790)
+        .domain = 30  
+    #elif defined(Regulatory_Domain_UA810)
+        .domain = 31  
+    #elif defined(Regulatory_Domain_UA830)
+        .domain = 32  
+    #elif defined(Regulatory_Domain_UA850)
+        .domain = 33  
+    #elif defined(Regulatory_Domain_UA870)
+        .domain = 34  
+    #elif defined(Regulatory_Domain_UA890)
+        .domain = 35  
+    #elif defined(Regulatory_Domain_UA910)
+        .domain = 36  
+    #elif defined(Regulatory_Domain_UA930)
+        .domain = 37  
+    #elif defined(Regulatory_Domain_UA950)
+        .domain = 38  
+    #elif defined(Regulatory_Domain_UA970)
+        .domain = 39  
+    #elif defined(Regulatory_Domain_UA990)
+        .domain = 40  
+    #elif defined(Regulatory_Domain_UA1010):
+        .domain = 41  
+    #elif defined(Regulatory_Domain_UA1030):
+        .domain = 42  
+    #elif defined(Regulatory_Domain_UA1050):
+        .domain = 43  
+    #elif defined(Regulatory_Domain_UA1070):
+        .domain = 44  
+    #elif defined(Regulatory_Domain_UA1090):
+        .domain = 45  
+    #elif defined(Regulatory_Domain_UA1110):
+        .domain = 46  
+    #elif defined(Regulatory_Domain_UA1130):
+        .domain = 47  
+    #elif defined(Regulatory_Domain_UA1150):
+        .domain = 48  
+    #elif defined(Regulatory_Domain_UA1170):
+        .domain = 49  
+    #elif defined(Regulatory_Domain_UA1190):
+        .domain = 50
+
     #else
     #error No regulatory domain defined, please define one in user_defines.txt
     #endif
@@ -236,6 +323,7 @@ void saveOptions(Stream &stream, bool customised)
     #endif
     doc["is-airport"] = firmwareOptions.is_airport;
     doc["domain"] = firmwareOptions.domain;
+    doc["domain2"] = firmwareOptions.domain2;
     doc["customised"] = customised;
     doc["flash-discriminator"] = firmwareOptions.flash_discriminator;
 
@@ -348,6 +436,7 @@ static void options_LoadFromFlashOrFile(EspFlashStream &strmFlash)
     firmwareOptions.lock_on_first_connection = doc["lock-on-first-connection"] | true;
     #endif
     firmwareOptions.domain = doc["domain"] | 0;
+    firmwareOptions.domain2 = doc["domain2"] | 1;
     firmwareOptions.flash_discriminator = doc["flash-discriminator"] | 0U;
 
     builtinOptions.clear();
@@ -362,6 +451,7 @@ void options_SetTrueDefaults()
     JsonDocument doc;
     // The Regulatory Domain is retained, as there is no sensible default
     doc["domain"] = firmwareOptions.domain;
+    doc["domain2"] = firmwareOptions.domain2;
     doc["flash-discriminator"] = firmwareOptions.flash_discriminator;
 
     File options = SPIFFS.open("/options.json", "w");

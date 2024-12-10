@@ -29,14 +29,66 @@ class BuzzerMode(Enum):
         return self.value
 
 class RegulatoryDomain(Enum):
+    fcc_915 = 'fcc_915'
     us_433 = 'us_433'
-    us_433_wide = 'us_433_wide'
     eu_433 = 'eu_433'
     au_433 = 'au_433'
-    in_866 = 'in_866'
-    eu_868 = 'eu_868'
-    au_915 = 'au_915'
-    fcc_915 = 'fcc_915'
+    us_433_wide = 'us_433_wide'
+    ua_210 = 'UA210'
+    ua_230 = 'UA230'
+    ua_250 = 'UA250'
+    ua_270 = 'UA270'
+    ua_290 = 'UA290'
+    ua_310 = 'UA310'
+    ua_330 = 'UA330'
+    ua_350 = 'UA350'
+    ua_370 = 'UA370'
+    ua_390 = 'UA390'
+    ua_410 = 'UA410'
+    ua_430 = 'UA430'
+    ua_450 = 'UA450'
+    ua_470 = 'UA470'
+    ua_490 = 'UA490'
+    ua_510 = 'UA510'
+    ua_530 = 'UA530'
+    ua_550 = 'UA550'
+    ua_570 = 'UA570'
+    ua_590 = 'UA590'
+    ua_610 = 'UA610'
+    ua_630 = 'UA630'
+    ua_650 = 'UA650'
+    ua_670 = 'UA670'
+    ua_690 = 'UA690'
+    ua_710 = 'UA710'
+    ua_730 = 'UA730'
+    ua_750 = 'UA750'
+    ua_770 = 'UA770'
+    ua_790 = 'UA790'
+    ua_810 = 'UA810'
+    ua_830 = 'UA830'
+    ua_850 = 'UA850'
+    ua_870 = 'UA870'
+    ua_890 = 'UA890'
+    ua_910 = 'UA910'
+    ua_930 = 'UA930'
+    ua_950 = 'UA950'
+    ua_970 = 'UA970'
+    ua_990 = 'UA990'
+    ua_1010 = 'UA1010'
+    ua_1030 = 'UA1030'
+    ua_1050 = 'UA1050'
+    ua_1070 = 'UA1070'
+    ua_1090 = 'UA1090'
+    ua_1110 = 'UA1110'
+    ua_1130 = 'UA1130'
+    ua_1150 = 'UA1150'
+    ua_1170 = 'UA1170'
+    ua_1190 = 'UA1190'
+
+    ua_2100 = 'UA2100'
+    ua_2400 = 'UA2400'
+    ua_2500 = 'UA2500'
+
 
     def __str__(self):
         return self.value
@@ -188,23 +240,117 @@ def generate_domain(mm, pos, count, init, step):
         val += step
 
 def domain_number(domain):
-    if domain == RegulatoryDomain.au_915:
+    if domain == RegulatoryDomain.fcc_915:
         return 0
-    elif domain == RegulatoryDomain.fcc_915:
+    elif domain == RegulatoryDomain.ua_210:
         return 1
-    elif domain == RegulatoryDomain.eu_868:
-        return 2
-    elif domain == RegulatoryDomain.in_866:
-        return 3
-    elif domain == RegulatoryDomain.au_433:
-        return 4
-    elif domain == RegulatoryDomain.eu_433:
-        return 5
-    elif domain == RegulatoryDomain.us_433:
-        return 6
-    elif domain == RegulatoryDomain.us_433_wide:
-        return 7
+    elif domain == RegulatoryDomain.ua_230:
+        return 2  
+    elif domain == RegulatoryDomain.ua_250:
+        return 3  
+    elif domain == RegulatoryDomain.ua_270:
+        return 4  
+    elif domain == RegulatoryDomain.ua_290:
+        return 5  
+    elif domain == RegulatoryDomain.ua_310:
+        return 6  
+    elif domain == RegulatoryDomain.ua_330:
+        return 7  
+    elif domain == RegulatoryDomain.ua_350:
+        return 8  
+    elif domain == RegulatoryDomain.ua_370:
+        return 9  
+    elif domain == RegulatoryDomain.ua_390:
+        return 10  
+    elif domain == RegulatoryDomain.ua_410:
+        return 11  
+    elif domain == RegulatoryDomain.ua_430:
+        return 12  
+    elif domain == RegulatoryDomain.ua_450:
+        return 13  
+    elif domain == RegulatoryDomain.ua_470:
+        return 14  
+    elif domain == RegulatoryDomain.ua_490:
+        return 15  
+    elif domain == RegulatoryDomain.ua_510:
+        return 16  
+    elif domain == RegulatoryDomain.ua_530:
+        return 17  
+    elif domain == RegulatoryDomain.ua_550:
+        return 18  
+    elif domain == RegulatoryDomain.ua_570:
+        return 19  
+    elif domain == RegulatoryDomain.ua_590:
+        return 20  
+    elif domain == RegulatoryDomain.ua_610:
+        return 21  
+    elif domain == RegulatoryDomain.ua_630:
+        return 22  
+    elif domain == RegulatoryDomain.ua_650:
+        return 23  
+    elif domain == RegulatoryDomain.ua_670:
+        return 24  
+    elif domain == RegulatoryDomain.ua_690:
+        return 25  
+    elif domain == RegulatoryDomain.ua_710:
+        return 26  
+    elif domain == RegulatoryDomain.ua_730:
+        return 27  
+    elif domain == RegulatoryDomain.ua_750:
+        return 28  
+    elif domain == RegulatoryDomain.ua_770:
+        return 29  
+    elif domain == RegulatoryDomain.ua_790:
+        return 30  
+    elif domain == RegulatoryDomain.ua_810:
+        return 31  
+    elif domain == RegulatoryDomain.ua_830:
+        return 32  
+    elif domain == RegulatoryDomain.ua_850:
+        return 33  
+    elif domain == RegulatoryDomain.ua_870:
+        return 34  
+    elif domain == RegulatoryDomain.ua_890:
+        return 35  
+    elif domain == RegulatoryDomain.ua_910:
+        return 36  
+    elif domain == RegulatoryDomain.ua_930:
+        return 37  
+    elif domain == RegulatoryDomain.ua_950:
+        return 38  
+    elif domain == RegulatoryDomain.ua_970:
+        return 39  
+    elif domain == RegulatoryDomain.ua_990:
+        return 40  
+    elif domain == RegulatoryDomain.ua_1010:
+        return 41  
+    elif domain == RegulatoryDomain.ua_1030:
+        return 42  
+    elif domain == RegulatoryDomain.ua_1050:
+        return 43  
+    elif domain == RegulatoryDomain.ua_1070:
+        return 44  
+    elif domain == RegulatoryDomain.ua_1090:
+        return 45  
+    elif domain == RegulatoryDomain.ua_1110:
+        return 46  
+    elif domain == RegulatoryDomain.ua_1130:
+        return 47  
+    elif domain == RegulatoryDomain.ua_1150:
+        return 48  
+    elif domain == RegulatoryDomain.ua_1170:
+        return 49  
+    elif domain == RegulatoryDomain.ua_1190:
+        return 50
 
+def domain2_number(domain):
+    if domain == RegulatoryDomain.ua_2100:
+        return 0
+    elif domain == RegulatoryDomain.ua_2400:
+        return 1
+    elif domain == RegulatoryDomain.ua_2500:
+        return 2  
+    
 def patch_firmware(options, mm, pos, args):
     if options.mcuType is MCUType.STM32:
         if options.radioChip is RadioType.SX127X and args.domain:
@@ -252,6 +398,8 @@ def patch_unified(args, options):
     if args.domain is not None:
         json_flags['domain'] = domain_number(args.domain)
 
+    if args.domain2 is not None:
+        json_flags['domain2'] = domain2_number(args.domain2)
     json_flags['flash-discriminator'] = randint(1,2**32-1)
 
     UnifiedConfiguration.doConfiguration(
@@ -354,6 +502,7 @@ def main():
     parser.add_argument('--buzzer-melody', type=str, default=None, help='If the mode is "custom", then this is the tune')
     # Regulatory domain
     parser.add_argument('--domain', type=RegulatoryDomain, choices=list(RegulatoryDomain), default=None, help='For SX127X based devices, which regulatory domain is being used')
+    parser.add_argument('--domain2', type=RegulatoryDomain, choices=list(RegulatoryDomain), default=None, help='For SX127X based devices, which regulatory domain is being used')
     # Unified target
     parser.add_argument('--target', type=str, help='Unified target JSON path')
     # Flashing options

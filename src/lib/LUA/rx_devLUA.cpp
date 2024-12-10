@@ -74,7 +74,7 @@ static struct luaItem_selection luaTlmPower = {
 #if defined(GPIO_PIN_ANT_CTRL)
 static struct luaItem_selection luaAntennaMode = {
     {"Ant. Mode", CRSF_TEXT_SELECTION},
-    0, // value
+    2, // value
     "Antenna A;Antenna B;Diversity",
     STR_EMPTYSPACE
 };
